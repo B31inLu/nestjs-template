@@ -10,7 +10,7 @@ export default tseslint.config(
     {
         name: "userDeclateBaseRule",
         files: ["**/src/**/*.{ts,js}", "**/lib/**/**.{ts,js}"],
-        ignores: ["**/dist/**", "**/docs/**"],
+        ignores: ["**/dist/**", "**/docs/**", "./*.config.*"],
         rules: {
             "no-console": ["off"],
             "@typescript-eslint/no-explicit-any": "off",
@@ -30,5 +30,5 @@ export default tseslint.config(
             sourceType: "module",
             globals: { ...globals.node, vitest: true, faker: true },
         },
-    }
+    },
 );
